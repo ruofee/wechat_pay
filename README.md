@@ -25,4 +25,9 @@
 //注: 这里的key是商户的key
 ```
 
-基本架构: html + nodejs
+调起支付窗口的两种方法:
+
+1. 调用wx的API
+2. 使用微信内置对象: WeixinJSBridge
+
+该demo使用第二种方法, 使用nodejs做一些签名(如paySign字段)的处理(由前端处理会过于沉重), 之后再返回给前端, 然后前端再调用WeixinJSBridge实现支付;
