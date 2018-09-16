@@ -172,3 +172,18 @@
       ```
 
       PS: 支付签名(paySign)生成算法的详细介绍: https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=4_3
+
+5. 关于如何使用该项目
+
+   1. 打开命令行, 克隆项目到本地并安装依赖
+
+      ```terminal
+      git clone https://github.com/ruofee/wechat_pay.git
+      npm install
+      ```
+
+   2. 需要修改frontend/index.html中config对象(将openid, out_trade_no, total_fee设为你在前面步骤获取到的值), 以及backend/wechatConfig.js中wechatConfig对象的属性值(appid, mchid, partnerKey, appsecret, notify_url)
+
+   3. 命令行输入`npm run dev`开启服务: 命令行显示`run in localhost: 3000 `
+
+   4. 浏览器打开`localhost:3000/index.html`, 注意: 需要在微信浏览器的环境下执行, 因为WeixinJSBridge为微信浏览器的原生对象
