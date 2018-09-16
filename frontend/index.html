@@ -18,6 +18,11 @@
 <body>
   <button onclick="pay()">点击支付</button>
   <script>
+    const config = {
+      openid: 'test',
+      out_trade_no: 'test',
+      total_fee: 'test',
+    }
     function ajax(method, url, data) {
       //封装ajax
       let http = new XMLHttpRequest()
@@ -64,9 +69,9 @@
     function pay() {
       //支付函数
       ajax('POST', '/pay', {
-        openid: 'test',
-        out_trade_no: 'test',
-        total_fee: 'test',
+        openid: config.openid,
+        out_trade_no: config.out_trade_no,
+        total_fee: config.total_fee,
       })
         .then((res) => {
           let { appId, timeStamp, nonceStr, signType, paySign } = res
