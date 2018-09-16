@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "dev": "node backend/index"
+  },
+  "dependencies": {
+    "koa": "^2.5.3",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "tenpay": "^2.1.8"
+  }
+}
