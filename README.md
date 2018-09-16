@@ -172,4 +172,3 @@
       ```
 
       PS: 支付签名(paySign)生成算法的详细介绍: https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=4_3
-
